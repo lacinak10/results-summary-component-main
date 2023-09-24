@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 18px;
+      background-color: hsl(0, 0%, 100%);
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .Result-container {
+      background-color: hsl(241, 81%, 54%);
+      border-bottom-right-radius: 45px;
+      border-bottom-left-radius: 45px;
+      text-align: center;
+      color: white;
+      height: 300px;
+    }
+
+    .data {
+      border-radius: 50%;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      margin-top: 20px;
+      display: flex;
+      background-color: hsl(241, 81%, 54%);
+      box-shadow: 0px 0px 100px 0px hsl(252, 100%, 67%);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+
+    }
+
+    .data h1 {
+      font-weight: 800;
+      font-size: 45px;
+    }
+
+    .data h5 {
+      color: hsl(241, 100%, 89%);
+      font-weight: lighter;
+    }
+
+
+    .Result-comment p {
+      font-size: 14px;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    .Result-comment h2 {
+      font-size: 18px;
+      font-size: 700;
+      margin: 20px;
+    }
+
+    .result {
+      color: hsl(241, 100%, 89%);
+      padding-top: 35px;
+    }
+
+    .summary-container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 25px;
+    }
+
+    .summary-container>p {
+      font-weight: 600;
+      font-size: 16px;
+      margin: 0 0 10px 0;
+      opacity: 0.8;
+    }
+
+    .summary-item {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 15px;
+      border-radius: 5px;
+      padding: 10px;
+      justify-content: space-between;
+      background-color: hsl(221, 100%, 96%);
+    }
+
+
+    .summary-item:last-of-type p:first-child {
+      color: hsl(234, 85%, 45%);
+    }
+
+    .summary-item:first-of-type p:first-child {
+      color: hsl(224, 30%, 27%)
+    }
+
+    .summary-item:nth-child(0n+3) p:first-child {
+      color: hsl(39, 100%, 56%);
+    }
+
+    .summary-item:nth-child(0n+4) p:first-child {
+      color: hsl(166, 100%, 37%);
+    }
+
+    .note {
+      font-weight: lighter;
+    }
+
+    .note {
+      color: hsl(241, 100%, 89%);
+      font-weight: bolder;
+
+    }
+
+    span {
+      color: black;
+    }
+
+    button {
+      background-color: hsl(224, 30%, 27%);
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      margin-top: 20px;
+      transition: all 0.5ms ease-in;
+    }
+
+    button:hover{
+      background-color:  hsl(241, 81%, 54%);;
+      cursor: pointer;
+    }
+
+
+
+    @media screen and (min-width:375px){
+      body > div{
+        display: flex;
+        flex-direction: row;
+        box-shadow: 4px 1px 4px 1px rgba(0, 0, 0, 0.144);
+        width: 500px;
+        height: 350px;
+        min-width: 450px;
+        margin: 150px auto;
+        padding: 0;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+      }
+
+      .Result-container{
+        height: 100%;
+        border-radius: 35px;
+        width: 50%;
+      }
+      .summary-container{
+        width: 50%;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="Result-container">
+      <div class="result">
+        <p>Your Result</p>
+      </div>
+      <div class="data">
+        <h1>76</h1>
+        <h5>of 100</h5>
+      </div>
+      <div class="Result-comment">
+        <h2>Greate</h2>
+        <p>
+          You scored higher than 65% of the <br>
+          peaple who have taken these tests.
+        </p>
+      </div>
+    </div>
+    <div class="summary-container">
+      <p>Summary</p>
+      <div class="summary-item">
+        <p>
+          <img src="assets/images/icon-reaction.svg" alt="" srcset="">
+          Reaction
+        </p>
+        <p class="note">
+          <span>80</span> /100
+        </p>
+      </div>
+      <div class="summary-item">
+        <p>
+          <img src="assets/images/icon-reaction.svg" alt="" srcset="">
+          Memory
+        </p>
+        <p class="note">
+          <span>80</span>/100
+        </p>
+      </div>
+      <div class="summary-item">
+        <p>
+          <img src="assets/images/icon-reaction.svg" alt="" srcset="">
+          Verbal
+        </p>
+        <p class="note">
+          <span>80</span>/100
+        </p>
+      </div>
+      <div class="summary-item">
+        <p>
+          <img src="assets/images/icon-reaction.svg" alt="" srcset="">
+          Visual
+        </p>
+        <p class="note">
+          <span>80</span>/100
+        </p>
+      </div>
+      <button>Continue</button>
+
+    </div>
+  </div>
+</body>
+
+</html>
